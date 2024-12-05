@@ -1,4 +1,4 @@
-with open("input_day4.txt", "r") as file:
+with open("input.txt", "r") as file:
     # Part 1
     total = 0
     puzzle = []
@@ -18,7 +18,7 @@ with open("input_day4.txt", "r") as file:
             if(puzzle[j][i] == "S" and puzzle[j][i+1] == "A" and puzzle[j][i+2] == "M" and puzzle[j][i+3] == "X"):
                 total += 1
 
-    #diagonals
+    # diagonals
     for i in range(len(puzzle)-3):
         for j in range(len(puzzle[i])-3):
             if(puzzle[i][j] == "X" and puzzle[i+1][j+1] == "M" and puzzle[i+2][j+2] == "A" and puzzle[i+3][j+3] == "S"):
@@ -33,6 +33,7 @@ with open("input_day4.txt", "r") as file:
     print("Part 1:", total)
 
 
+    # Part 2
     total = 0
     for i in range(len(puzzle)-2):
         for j in range(len(puzzle[i])-2):
