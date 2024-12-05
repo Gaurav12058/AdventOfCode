@@ -1,6 +1,5 @@
 from functools import cmp_to_key
 
-
 def violatesRule(list, rules):
     for rule in rules:
         if(rule[0] in list and rule[1] in list):
@@ -9,6 +8,7 @@ def violatesRule(list, rules):
     return False
 
 def rulesf(x,y):
+    # If x should come before y
     if (x, y) in rules:
         return -1
     # If y should come before x
