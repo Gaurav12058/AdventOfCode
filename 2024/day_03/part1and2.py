@@ -1,6 +1,6 @@
 import re
 
-with open("input.txt", "r") as file:
+with open("input", "r") as file:
 
     # Part 1
     matches = re.findall(r"mul\((\d+),(\d+)\)", file.read())

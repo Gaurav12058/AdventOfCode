@@ -18,7 +18,7 @@ def rulesf(x,y):
     else:
         return 0
 
-with open("input.txt", "r") as file:
+with open("input", "r") as file:
     
     rules = []
 

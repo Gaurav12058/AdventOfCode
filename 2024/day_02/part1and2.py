@@ -24,7 +24,7 @@ def decreasing(row):
 
 
 rows = []
-with open("input.txt", "r") as file:
+with open("input", "r") as file:
     for line in file:
         row = list(map(int, line.strip().split()))
         rows.append(row)
