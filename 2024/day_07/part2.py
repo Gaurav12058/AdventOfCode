@@ -40,8 +40,7 @@ sum = 0
 for equation in data:
     goal = equation.pop(0)
     for num in range(3**(len(equation)-1)):
-        value = tryValue(num, equation)
-        if(goal == value):
+        if(goal == tryValue(num, equation)):
             sum += goal
             break
 
