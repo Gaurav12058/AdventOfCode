@@ -38,15 +38,17 @@ with open("input", "r") as file:
 spaces = 0
 visited = set()
 
-while(j < len(map[0]) and i < len(map) and i >= 0 and j >= 0):
+while(0 <= j < len(map[0]) and 0 <= i < len(map)):
     
     if((map[i][j] == "." or map[i][j] == "^") and not (i,j) in visited):
         spaces += 1
     
     visited.add((i,j))
+
     if(map[i][j] == "#"):
         i, j = moveBack(i, j, direction)
         direction = turnRight(direction)
+        
     i, j = moveForward(i, j, direction)
 
 print(spaces)
